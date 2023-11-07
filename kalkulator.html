@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- My Css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Informatika-Universitas Siliwangi</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light shadow-sm">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/LOGO-UNSIL-300x300.png" alt="" width="35" height="35" class="d-inline-block align-text-top"> 
+            
+            Kalkulator Kalkulus
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="materi.html">Materi mengenai trigonometri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="kalkulator.html">Kalkulator trigonometri</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-danger" href="https://google.com">Keluar</a>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        
+       
+    <!-- Akhir navbar -->
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		.container {
+            padding-top: 2rem;
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		#result {
+			height: 40px;
+			line-height: 40px;
+			text-align: right;
+			padding: 0 10px;
+			border: 1px solid #ccc;
+		}
+
+		.btn {
+			width: 70px;
+			height: 60px;
+			font-size: 20px;
+			margin: 10px 5px;
+			border: none;
+			background-color: #f0f0f0;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="result"></div>
+		<div>
+			<button class="btn" onclick="clearResult()">C</button>
+			<button class="btn" onclick="deleteDigit()">&larr;</button>
+			<button class="btn" onclick="addSymbol('/')">&divide;</button>
+			<button class="btn" onclick="addDigit('7')">7</button>
+			<button class="btn" onclick="addDigit('8')">8</button>
+			<button class="btn" onclick="addDigit('9')">9</button>
+			<button class="btn" onclick="addSymbol('*')">&times;</button>
+			<button class="btn" onclick="addDigit('4')">4</button>
+			<button class="btn" onclick="addDigit('5')">5</button>
+			<button class="btn" onclick="addDigit('6')">6</button>
+			<button class="btn" onclick="addSymbol('-')">&minus;</button>
+			<button class="btn" onclick="addDigit('1')">1</button>
+			<button class="btn" onclick="addDigit('2')">2</button>
+			<button class="btn" onclick="addDigit('3')">3</button>
+			<button class="btn" onclick="addSymbol('+')">&#43;</button>
+			<button class="btn" onclick="addDigit('0')">0</button>
+			<button class="btn" onclick="addSymbol('.')">.</button>
+			<button class="btn" onclick="calculateResult()">=</button>
+		</div>
+	</div>
+
+	<script>
+		let resultElement = document.getElementById("result");
+		let expression = "";
+
+		function addDigit(digit) {
+			expression += digit;
+			resultElement.innerHTML = expression;
+		}
+
+		function addSymbol(symbol) {
+			expression += symbol;
+			resultElement.innerHTML = expression;
+		}
+
+		function deleteDigit() {
+			expression = expression.slice(0, -1);
+			resultElement.innerHTML = expression;
+		}
+
+		function clearResult() {
+			expression = "";
+			resultElement.innerHTML = expression;
+		}
+
+		function calculateResult() {
+			try {
+				const result = eval(expression);
+				resultElement.innerHTML = result;
+			} catch (error) {
+				resultElement.innerHTML = "Invalid expression";
+			}
+		}
+	</script>
+</body>
+</html>
+   
+    <!-- kalkulator -->
+    
+
+
+<!-- foter -->
+<footer class="text-center">
+    <p>Created with by <a href="https://www.instagram.com/infactivty/">Karya IF2023</a></p>
+</footer>
+<!-- akhir foter -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
